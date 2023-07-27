@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+body {
+    font-size: .875rem;
+    font-family: 'Poppins', sans-serif;
+    background:url(../images/bg.png) rgba(221, 221, 221, 0.1);
+
+  }
+
+
+  .error{
+    color:red;
+}
+
+nav .nav-item .nav-link{
+  color:#eff0f0 !important;
+}
+
+.badge-pink{
+  background-color: rgb(220, 20, 137)  ;
+
+}
+
+  /* .Login_Div{
+    background: url(../images/bg6.webp);
+  }
+   */
+  .feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
+
+  .required{
+    color:red;
+  }
+  
+  /*
+   * Sidebar
+   */
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+
+  .bg-dark-info{
+    background-color: #0b6e7e !important;
+    
+  }
+  
+  .bg-deep-orange{
+    background-color: rgb(204, 91, 47);
+  }
+  @media (max-width: 767.98px) {
+    .sidebar {
+      top: 5rem;
+    }
+  }
+  
+  .badge-pink{
+    background-color: rgb(201, 10, 115);
+    color: #fff;
+    text-decoration: none;
+    
+  }
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+  
+  .sidebar .nav-link {
+    
+    font-weight: 500;
+    color: #333;
+  }
+  
+ 
+  
+  .sidebar .nav-link.active {
+    color: #fff;
+    background-color: #0a41f5;
+    
+  }
+  
+ 
+  
+  .sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+  
+  /*
+   * Navbar
+   */
+  
+  .navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  }
+  
+  .navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+  }
+  
+  .navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+  }
+  
+  .form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+  }
+  
+  .form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(8, 127, 163); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(5, 87, 165); 
+}
+
+  /* Preloader */
+
+  #preLoader {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blink {
+   
+    animation: blinker 1s linear infinite;
+   
+  }
+  @keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+
+  .blink-1 {
+    animation: blinker-1 1s linear infinite;
+  }
+  @keyframes blinker-1 {
+    80% {
+       
+        background: #eff0f0;
+        border-radius: 10px;
+    }
+  }
+
+ .bg-dark-yellow{
+    background-color: #bb6706 !important;
+  }
+
+  .bg-dark-green{
+    background-color: #28643c !important;
+  }
+
+  .bg-dark-blue{
+    background-color: #380875 !important;
+  }
+  input,textarea{
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .Login_Div{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Login_Div{
+    /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/bg6.webp); */
+    background-image: linear-gradient(-90deg, #0b6e7e, #0ac6f5);
+  }
+
+  .Login_Div .card{
+    width: 28em;
+    
+    background-color: #fff;
+   
+    padding: 1em;
+  }
+
+  .Login_Div .card .card-header img{
+    width:230px;
+    /* margin-top: 5px; */
+    flex-shrink: 0;
+    object-fit: contain;
+}
+  
+  /* Responsive ness */
+
+  @media only screen and (max-width: 600px) {
+    .Login_Div .card{
+      width: 90%;
+    }
+  }
