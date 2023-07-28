@@ -14,14 +14,15 @@ padding-bottom: 40px;
             <form class="form-signin ">
               <img class="mb-4" src="./assets/images/logo.png" alt="" width="72" height="72">
               <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
-              <label for="inputEmail" class="sr-only">Fullname</label>
-              <input type="text" id="inputEmail" class="form-control" placeholder="Your full name" required autofocus="">
-              <label for="inputEmail" class="sr-only">Email address</label>
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus="">
+              <label for="fname" class="sr-only">Fullname</label>
+              <input type="text" id="fname" class="form-control" placeholder="Your full name" required autofocus="" name="fname" pattern="[A-Za-z ]{3,}" >
+              <label for="uemail" class="sr-only">Email address</label>
+              <input type="email" id="uemail" name="uemail" class="form-control" placeholder="Email address" required autofocus="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter valid email address">
+
               <label for="Password" class="sr-only">Password</label>
-              <input type="password" id="Password" class="form-control" placeholder="Password" required>
+              <input type="password" name="pwd" id="Password" class="form-control" placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
               <label for="cPassword" class="sr-only">Confirm Password</label>
-              <input type="password" id="cPassword" class="form-control" placeholder="Confirm Password" required>
+              <input type="password" name="cpwd" id="cPassword" class="form-control" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
               <!-- <div class="checkbox mb-3">
                 <label>
                   <input type="checkbox" value="remember-me"> Remember me

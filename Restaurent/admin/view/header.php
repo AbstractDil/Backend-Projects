@@ -3,42 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
     <title>
     <?php
     if($page == ''){
-        echo 'Home - Welcome to Mr. Deb Restaurant';
+        echo ' Admin Login';
     }
-    elseif($page == 'home'){
-        echo 'Home - Welcome to Mr. Deb Restaurant';
+    elseif($page == 'login'){
+        echo 'Admin Login';
     }
-    elseif($page =='about-us'){
-        echo 'About Us - Welcome to Mr. Deb Restaurant';
-    }
-    elseif($page == 'contact-us'){
-        echo 'Contact Us - Welcome to Mr. Deb Restaurant';
-    }
-    elseif($page == 'signup'){
-        echo 'Sign Up - Welcome to Mr. Deb Restaurant';
-    }
-    elseif($page =='signin'){
-        echo 'Sign In - Welcome to Mr. Deb Restaurant';
-    }
+    elseif($page == 'Admin Dashboard'){
+        echo 'Admin Dashboard';
+  }
     else{
         echo '404 Page Not Found - Welcome to Mr. Deb Restaurant';
     }
     ?>
     </title>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/bootstrap-4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/bootstrap-4.6.2/css/bootstrap.min.css">
  
     <!-- jQuery library -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-<script src="./assets/bootstrap-4.6.2/js/bootstrap.min.js"></script>
+<script src="../assets/bootstrap-4.6.2/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -65,7 +56,7 @@
             ?>
 
           ">
-            <a class="nav-link " href="?p=home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link " href="?p=dashboard">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item py-2
             <?php
@@ -89,33 +80,7 @@
             <a class="nav-link" href="?p=contact-us">Contact Us</a>
           </li>
 
-          <li class="nav-item py-2 
-            <?php
-            if($page == 'signup'){
-                echo 'active';
-            }
-            ?>
-          ">
-            <a class="btn btn-violet rounded-pill mx-2" href="?p=signup">
-              <span class="px-3">
-                Sigup
-              </span>
-            </a>
-          </li>
-          <li class="nav-item py-2
-            <?php
-            if($page =='signin'){
-                echo 'active';
-            }
-            ?>
-          ">
-            <a class="btn  btn-warning rounded-pill mx-2" href="?p=signin">
-              <span class="px-3">
-
-                Sigin
-              </span>
-            </a>
-          </li>
+         
           
         </ul>
         <!-- <form class="form-inline mt-2 mt-md-0">

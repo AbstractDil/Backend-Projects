@@ -1,5 +1,6 @@
 <?php 
 
+
 $page = '';
 
 if(isset($_GET['p'])){
@@ -39,7 +40,7 @@ elseif($page == 'contact-us'){
 elseif($page == 'signup'){
 
    
-
+    include('config/database.php');
     include ('view/header.php');
     include ('view/signup.php');
     include ('view/footer.php');
