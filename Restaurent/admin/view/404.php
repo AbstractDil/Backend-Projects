@@ -11,7 +11,7 @@
                     The page you are looking for is not available.
                 </p>
                 <p class="mt-5">
-                    <a class="btn btn-danger rounded-pill btn-sm" href="?p=home">
+                    <a class="btn btn-danger rounded-pill btn-sm" href="?p=dashboard&c=home">
                         <span class="px-3">
                             Back to Home
                         </span>

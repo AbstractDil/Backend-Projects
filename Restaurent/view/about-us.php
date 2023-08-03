@@ -6,7 +6,7 @@
     
     <section class="jumbotron text-center">
         <div class="container">
-          <h3 class="jumbotron-text display-3">
+          <h3 class="jumbotron-text display-4">
             About Us 
           </h3>
          
