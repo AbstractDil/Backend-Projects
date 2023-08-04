@@ -18,7 +18,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>
-                Welcome to Mr. Deb Restaurant
+                Welcome to Nandy Cafe
               </h1>
               <p>Some representative placeholder content for the first slide of the carousel.</p>
               <p><a class="btn btn-lg btn-warning rounded-pill" href="?p=signup">Sign up today</a></p>
@@ -33,7 +33,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>
-                Welcome to Mr. Deb Restaurant
+                Welcome to  Nandy Cafe
               </h1>
               <p>
                 Special Chicken With Laccha Paratha
@@ -51,7 +51,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>
-                Welcome to Mr. Deb Restaurant
+                Welcome to  Nandy Cafe
               </h1>
               <p>Some representative placeholder content for the third slide of this carousel.</p>
               <p><a class="btn btn-lg btn-warning rounded-pill" href="?p=menu">Menu Items</a></p>

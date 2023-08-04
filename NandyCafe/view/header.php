@@ -25,49 +25,49 @@ if(isset($_SESSION['msg'])){
     <title>
     <?php
     if($page == ''){
-        echo 'Home - Welcome to Mr. Deb Restaurant';
+        echo 'Home - Welcome to Nandy Cafe';
     }
     elseif($page == 'home'){
-        echo 'Home - Welcome to Mr. Deb Restaurant';
+        echo 'Home - Welcome to Nandy Cafe';
     }
     elseif($page =='about-us'){
-        echo 'About Us - Welcome to Mr. Deb Restaurant';
+        echo 'About Us - Welcome to Nandy Cafe';
     }
     elseif($page == 'contact-us'){
-        echo 'Contact Us - Welcome to Mr. Deb Restaurant';
+        echo 'Contact Us - Welcome to Nandy Cafe';
     }
     elseif($page == 'signup'){
-        echo 'Sign Up - Welcome to Mr. Deb Restaurant';
+        echo 'Sign Up - Welcome to Nandy Cafe';
     }
     elseif($page =='signin'){
-        echo 'Sign In - Welcome to Mr. Deb Restaurant';
+        echo 'Sign In - Welcome to Nandy Cafe';
     }
 
     elseif($page == 'signout'){
-        echo 'Confirm Sign Out - Welcome to Mr. Deb Restaurant';
+        echo 'Confirm Sign Out - Welcome to Nandy Cafe';
     }
 
     elseif($page =='menu'){
-        echo 'Menu - Welcome to Mr. Deb Restaurant';
+        echo 'Menu - Welcome to Nandy Cafe';
     
   }
 
     elseif($page =='profile'){
-        echo 'Profile - Welcome to Mr. Deb Restaurant';
+        echo 'Profile - Welcome to Nandy Cafe';
       
   }
   elseif($page =='cart'){
-    echo 'My Cart- Welcome to Mr. Deb Restaurant';
+    echo 'My Cart- Welcome to Nandy Cafe';
   
 }
 
 elseif($page =='my-orders'){
 
-    echo 'My Orders - Welcome to Mr. Deb Restaurant';
+    echo 'My Orders - Welcome to Nandy Cafe';
 
 }
     else{
-        echo '404 Page Not Found - Welcome to Mr. Deb Restaurant';
+        echo '404 Page Not Found - Welcome to Nandy Cafe';
     }
     ?>
     </title>
