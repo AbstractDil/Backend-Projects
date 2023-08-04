@@ -13,14 +13,22 @@ sleep(3);
 
 date_default_timezone_set('Asia/Kolkata');
 
+function safe_sql($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
 // check if form is submitted
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $uid = $_POST["uid"];
-
-    $fname = $_POST["fname"];
-    $uemail = $_POST["uemail"];
+    $uid = safe_sql($_POST['uid']);
+    
+    $fname = safe_sql($_POST['fname']);
+    
+    $uemail = safe_sql($_POST['uemail']);
    
     $datetime = date("Y-m-d H:i:s");
  

@@ -14,14 +14,23 @@ sleep(2);
 
 date_default_timezone_set('Asia/Calcutta');
 
+// Prevent SQL Injection
+
+function safe_sql($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
  include('../config/database.php');
 
  if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    $title = $_POST['title'];
-    $price = $_POST['price'];
-    $category = $_POST['category'];
-    $rating = $_POST['rating'];
+    $title = safe_sql($_POST['title']);
+    $price = safe_sql($_POST['price']);
+    $category = safe_sql($_POST['category']);
+    $rating = safe_sql($_POST['rating']);
     $datetime  = date("Y-m-d H:i:s");
 
     $target_dir = "../assets/MenuItems/";

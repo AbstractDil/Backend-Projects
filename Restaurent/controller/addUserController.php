@@ -14,17 +14,26 @@ date_default_timezone_set('Asia/Kolkata');
 
 sleep(3);
 
+// Prevent SQL Injection
+
+function safe_sql($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
 // echo "Sign Up Form Controller <br>";
 
 // get data from ajaz request
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $fname = $_POST["fname"];
-    $uemail = $_POST["uemail"];
-    $pwd = $_POST["pwd"];
+    $fname = safe_sql($_POST["fname"]);
+    $uemail = safe_sql($_POST["uemail"]);
+    $pwd = safe_sql($_POST["pwd"]);
     
-    $cpwd = $_POST["cpwd"];
+    $cpwd = safe_sql($_POST["cpwd"]);
     $datetime = date("Y-m-d H:i:s");
     /*
 
