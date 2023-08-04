@@ -1,15 +1,7 @@
 <?php
         session_unset();
         session_destroy();
-
-        // delete cookie
-
-        setcookie("uemail","",time() - (86400 * 30),"/");
-        setcookie("fname","",time() - (86400 * 30),"/");
-        setcookie("uid","",time() - (86400 * 30),"/");
-        setcookie("is_login","",time() - (86400 * 30),"/");
-
-        header("location: ?p=home");
+        //exit;
 
 ?>
 

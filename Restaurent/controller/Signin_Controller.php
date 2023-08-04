@@ -43,7 +43,7 @@ $sql = " SELECT * FROM user_tbl WHERE uemail = '{$uemail}'  ";
         // set cookie
         setcookie("uemail",$uemail,time() + (86400 * 30),"/");
         setcookie("fname",$row["fname"],time() + (86400 * 30),"/");
-        setcookie("uid",$row["uid"],time() + (86400 * 30),"/");
+        setcookie("uid",$row["id"],time() + (86400 * 30),"/");
         setcookie("is_login",true,time() + (86400 * 30),"/");
         
     

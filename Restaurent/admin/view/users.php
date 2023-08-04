@@ -105,10 +105,11 @@
     $.ajax({
       url: "../controller/fetchAllUsers_controller.php",
       type: "GET",
-      dataType: "html",
+      dataType : "html",
         success: function (data) {
-           // console .log(data);
+            // console .log("Hello Data");
             var users = JSON.parse(data);
+            
             var html = "";
             for (var i = 0; i < users.length; i++) {
             html += "<tr>";

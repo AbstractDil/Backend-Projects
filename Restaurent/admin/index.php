@@ -16,7 +16,7 @@ if(isset($_GET['p']) || isset($_GET['c'])){
 
 if($page == ''){
 
-    if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true && $_SESSION['user_type'] == 1){
+    if(isset($_SESSION['is_login']) && $_SESSION['is_login'] == true && $_SESSION['usertype'] == 1){
 
         header("location: ?p=dashboard&c=home");
 

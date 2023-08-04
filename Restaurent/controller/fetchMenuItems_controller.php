@@ -25,7 +25,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 
 
-    header('Content-Type: application/json');
+    //header('Content-Type: application/json');
     echo json_encode($output);
 } else {
     echo json_encode(array('message' => 'No Users Found', 'status' => false));

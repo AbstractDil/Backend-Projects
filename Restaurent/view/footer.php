@@ -11,7 +11,9 @@
 
        <span class="text-center">
          Developed by <a href="">
-            <strong class="text-warning">Mr. Deb Restaurant Tech Team</strong>
+            <strong class="text-warning">
+              Sayantan Deb &amp; Soumyajit Haldar
+</strong>
          </a>
        </span>
     </p>
