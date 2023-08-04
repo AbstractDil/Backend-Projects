@@ -93,13 +93,36 @@ window.onload = function() {
     <!-- Navbar Starts -->
   <header>
     <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top shadow">
+
+    <button class="navbar-toggler collapsed btn-sm " type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="padding:0px 0px 0px 2px !important;">
+         
+         <i class="fa fa-bars text-primary"></i>
+         </button>
       <a class="navbar-brand mx-3" href="../?p=home">
-        <img src="../assets/images/logo-3.png" width="150" height="50" class="logo" alt="">
+        <img src="../assets/images/logo-3.png" width="120" height="50" class="logo" alt="">
       
       </a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="btn  btn-warning rounded-pill d-md-none" 
+              href="<?php echo isset($_SESSION["is_login"]) && $_SESSION["is_login"] == true ? '?p=profile' : '?p=login'?>"
+              >
+                <i class="fa fa-user"></i>
+            </a>
+
+            <?php 
+
+           echo isset($_SESSION["is_login"]) && $_SESSION["is_login"] == true ?
+
+            '<a class="btn btn-danger rounded-pill d-md-none" href="javascript:void(0);" onclick="confirm(\'Are you sure you want to sign out?\') ? window.location.href=\'../?p=signout\' : false;">
+            <span>
+            <i class=\'fa fa-power-off\'></i>
+              
+
+            </span>
+
+            </a>' : ''
+
+            ?>
+     
       <div class="navbar-collapse collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto px-3">
           <li class="nav-item  py-2

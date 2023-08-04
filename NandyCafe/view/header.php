@@ -111,7 +111,7 @@ window.onload = function() {
          <i class="fa fa-bars text-primary"></i>
          </button>
       <a class="navbar-brand " href="?p=home">
-        <img src="assets/images/logo-3.png" width="150" height="50" class="logo" alt="">
+        <img src="assets/images/logo-3.png" width="120" height="50" class="logo" alt="">
       
       </a>
 
