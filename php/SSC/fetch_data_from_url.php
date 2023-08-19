@@ -92,17 +92,32 @@ foreach($elements as $element){
 for ( $totalMarks = 0, $s = 0; $s < 4; $s++) {
 
     $sectionLabels = $xpath->query('//div[@class="section-lbl"]');
-    $sectionTexts = $sectionLabels[$s]->getElementsByTagName('span')->item(0)->nodeValue;
+    //$sectionTexts = $sectionLabels[$s]->getElementsByTagName('span')->item(0)->nodeValue;
     $sectionValue = $sectionLabels[$s]->getElementsByTagName('span')->item(1)->nodeValue;
 
 
   for ( $right = 0,$notAttempted = 0, $bonus = 0, $i = 25 * $s;$i < 25 * $s + 25;$i++) {
     " -- " ===
-      $xpath->query('//div[@class="question-pnl"]')[$i]->getElementsByTagName('td')->item(8)->nodeValue && $notAttempted++;
-       // var sectionTexts = sectionLabels[i].querySelector('span.bold').textContent;
+    /*
+      $xpath->query('//div[@class="question-pnl"]')[$i]->getElementsByTagName('table')->item(0)->getElementsByTagName('tbody')->item(0)->getElementsByTagName('tr')->item(0)->getElementsByTagName('table')->item(0)->getElementsByTagName('tbody')->item(0)->getElementsByTagName('tr')->item(3)->getElementsByTagName('td')->item(2)->nodeValue && $notAttempted++;
+      */
+
+
+      $xpath->query('//div[@class="question-pnl"]')[$i]->getElementsByTagName('td')->item(17)->nodeValue[0] && $notAttempted++;
+       // var sectionTexts = sectionLabels[i].querySelector('span.bold').textContent;       
+      
+      
+
+       echo $xpath->query('//div[@class="question-pnl"]')[$i]->getElementsByTagName('td')->item(17)->nodeValue[0];
+
+      
+
+
+      
     try {
-      $xpath->query('//div[@class="question-pnl"]')[$i]->getElementsByTagName('td')->item(0)->nodeValue[0] ===
-        $xpath->query('//div[@class="question-pnl"]')[$i]->getElementsByTagName('td')->item(5)->nodeValue && $right++;
+      $xpath->query('//div[@class="question-pnl"]')[$i]->where('class', 'rightAns')->item(0)->nodeValue[0]
+      ===
+        $xpath->query('//div[@class="question-pnl"]')[$i]->getElementsByTagName('td')->item(17)->nodeValue && $right++;
     } catch( Exception $e) {
       $bonus++;
     }
