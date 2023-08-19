@@ -10,9 +10,7 @@
 
     <style>
 
-        body{
-            font-size : 18px !important;
-        }
+       
 
 
         footer {
@@ -93,6 +91,13 @@
             }
 
             }
+
+
+
+
+           
+
+
     </style>
 
 </head>
