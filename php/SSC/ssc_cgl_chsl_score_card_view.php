@@ -205,12 +205,19 @@
         <?php
 
 
- if($_POST['generate']){
+//  if($_POST['generate']){
 
-    $url = $_POST['url'];
+//     $url = $_POST['url'];
 
 
-            // $url = "https://ssc.digialm.com///per/g27/pub/2207/touchstone/AssessmentQPHTMLMode1//2207O23185/2207O23185S50D109809/16905244742204258/4419015132_2207O23185S50D109809E1.html";
+             $url = "https://ssc.digialm.com///per/g27/pub/2207/touchstone/AssessmentQPHTMLMode1//2207O23185/2207O23185S50D109809/16905244742204258/4419015132_2207O23185S50D109809E1.html";
+
+
+             // check length of url
+
+               // $urlLength = strlen($url);
+
+                //echo $urlLength;
 
             $data = file_get_contents($url);
 
@@ -234,7 +241,7 @@
 
             $data = preg_replace('#<link(.*?)>#is', '', $data);
 
- }  
+//  }  
 
 
 ?>
