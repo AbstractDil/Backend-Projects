@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+    <style>
+        body{
+            background-color: #f1f1f1;
+
+        }
+        .error{
+            color: red;
+        }
+        .button{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: #45a049;
+        }
+        form{
+            font-size: 22px;
+        }
+        input{
+            padding: 10px;
+            font-size: 20px;
+        }
+        .success{
+            color: green;
+        }
+       
+    </style>
+
+
+
+</head>
+<body>
+
+    <center>
+        <h1>Insert Data Using Express Js</h1>
+<br>
+
+<%
+
+if(messages.success){
+%>
+<p class="success"><%= messages.success %></p>
+<%
+
+}
+%>
+
+    <form  action="insert" method="POST" >
+
+        <input type="text" name="uname" id="uname" placeholder="Enter name" required>
+        <span id="unameMsg" class="error"></span>
+        <br> <br>
+
+        <input type="text" name="uemail" id="uemail" placeholder="abc@gmail.com"  required>
+        <span id="uemailMsg"></span>
+
+        <br><br>
+
+         <input type="password" name="upwd" id="upwd" placeholder="Enter Password" required>
+        <span id="upwdMsg"></span>
+
+         <br><br>
+        <input type="submit" class="button" value="Insert">
+
+
+    </form>
+</center>
+
+
+    
+    
+</body>
+</html>

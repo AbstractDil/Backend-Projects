@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs'); %>
+
+  </head>
+  <body onload="myLoader()">
+    <%- include('../partials/preloader.ejs'); %>
+
+    <%- include('../partials/nav.ejs'); %>
+  
+
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-12 alert alert-info mb-5">
+            <h3 class="alert alert-danger text-white  text-center bg-danger">Member Login - MathHub Learning Management System</h3>
+            
+            <div class="d-flex align-items-center justify-content-center my-5">
+
+              <div class="card shadow border-0 " style="width: 420px" >
+                <div class="card-header bg-primary">
+                  <div class="card-title fs-4 text-white">
+                  Login
+                  </div>
+                </div>
+                <div class="card-body ">
+                  <form>
+                    <div class="mb-3 px-2">
+                      <label for="uemail" class="form-label"> <i class="bi bi-envelope-fill"></i> Email address</label>
+                      <input type="email" class="form-control" id="uemail" name="uemail" minlength="15" required >
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3 px-2">
+                      <label for="pwd" class="form-label"> <i class="bi bi-lock-fill"></i> Password</label>
+                      <input type="password" class="form-control" id="pwd" name="pwd" required>
+                    </div>
+                    
+                    <div class="row ">
+                      <div class="col-md-6">
+                        <a class="btn btn-warning form-control my-1" href="/Login" type="button"> <i class="bi bi-arrow-clockwise"></i> Reset</a>
+
+                      </div>
+                      <div class="col-md-6">
+                        <button class="btn btn-success form-control my-1" type="submit">Login</button>
+
+                      </div>
+
+                      <div class="d-grid gap-2 col-md-12 my-2 mx-auto">
+                        <a href="/Registration" class="btn btn-secondary" type="button">Not a member yet ? Register Now</a>
+                        <a href="/ForgetPassword" class="btn btn-primary" type="button">Forget Password ? Recover Now</a>
+                        
+                      </div>
+                      
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <%- include('../partials/footer.ejs'); %>
+
+
+    <%- include('../partials/bs.ejs'); %>
+
+  </body>
+</html>

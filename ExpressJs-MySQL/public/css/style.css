@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Semi+Condensed:wght@200&family=Kanit:wght@200&family=Lato&family=Oswald:wght@500&family=Playfair+Display&family=Roboto+Condensed:wght@400;700&family=Work+Sans&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#loading{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: black url('http://localhost/PG-Update/2022/src/Image/preloader.gif') no-repeat center; */
+  z-index: 9999;
+}
+  
+
+.nav-link{
+    color: #fff;
+}
+
+.nav-link:hover{
+    color: rgb(253, 237, 6);
+    text-decoration: none;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(95, 217, 233); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background :  rgb(62, 165, 179); 
+
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(13, 194, 218) ; 
+  }
+a{
+  text-decoration: none;
+}
+  
+
