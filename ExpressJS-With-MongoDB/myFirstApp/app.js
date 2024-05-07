@@ -1,44 +1,49 @@
 const express = require('express');
-const app = express();
-
-// database connection
+const bodyParser = require('body-parser');
 const connectDB = require('./database/connection');
+const userRoutes = require("./routes/userRoutes");
 
-// server port 
+const app = express();
 const port = process.env.PORT || 3000;
 
-// define routes 
-const user_routes = require("./routes/userRoutes");
+// Middleware to parse JSON bodies
+app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(bodyParser.json());
 
-// application default  routes 
+// Define application routes
 app.get('/', (req, res) => {
-  res.send('Hello From Express Js')
-})
+  res.send('Hello From Express Js');
+});
 
 app.get('/about', (req, res) => {
-    res.send('About me')
-})
+  res.send('About me');
+});
 
-app.get('/contact',(req,res) => {
-    res.send('Contact with me')
-})
+app.get('/contact', (req, res) => {
+  res.send('Contact with me');
+});
 
-// use middleware to set user router 
-app.use("/user/",user_routes);
+// Use user routes
+app.use("/api/user/", userRoutes);
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+  next();
+});
 
-// start server function 
-const startServer = async(req,res) => {
-  try{
-     await connectDB();
+// Start the server
+const startServer = async () => {
+  try {
+    await connectDB();
     app.listen(port, () => {
-      console.log(`App is listening on port ${port}`)
+      console.log(`App is listening on port ${port}`);
     });
+  } catch (err) {
+    console.error(err);
+    process.exit(1); // Exit with non-zero code to indicate failure
   }
-  catch(err){
-    console.log(err);
-  }
-
 };
 
-startServer(); // call the function to start the server
+startServer();

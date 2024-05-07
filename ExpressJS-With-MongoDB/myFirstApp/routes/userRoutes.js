@@ -1,21 +1,12 @@
-const express = require("express");
+// routes/userRoutes.js
+
+const express = require('express');
 const router = express.Router();
+const { userAboutPage, userHomePage, userRegistration } = require('../controllers/userController');
 
-const {userHomePage,userAboutPage} = require("../controllers/userController");
-
-/*
-// Home page route.
-router.get("/", function (req, res) {
-  res.send("User home page");
-});
-
-// About page route.
-router.get("/about", function (req, res) {
-  res.send("User about page ");
-});
-*/
-
-router.route("/").get(userHomePage);
-router.route("/about").get(userAboutPage);
+// Define routes
+router.get('/', userHomePage);
+router.get('/about', userAboutPage);
+router.post('/register', userRegistration);
 
 module.exports = router;
